@@ -51,13 +51,13 @@ wss://<api_key>.ncompass.tech/denoise/<in_t>/<out_t>/<api_key>/<bps>/<in_freq>/<
 
 - `<in_t>`
 
-  Input type. *Only valid option is pcm*. Kept in the API in order to potentially support server
+  Input type. **Only valid option is pcm**. Kept in the API in order to potentially support server
   side file encoding in the future. This is important as it tells the server that that the incoming
   chunk is only audio data and doesn't have anything else like .wav headers for instance.
 
 - `<out_t>`
 
-  Output type. *Only valid option is pcm*. Kept in the API in order to potentially support server
+  Output type. **Only valid option is pcm**. Kept in the API in order to potentially support server
   side file encoding in the future. 
 
 - `<bps>`
