@@ -37,3 +37,39 @@ Edit the run.sh file provided to set the following arguments.
 - `--deepgram_api_key <API KEY>`: Deepgram API Key
 
   We have provided an example for deepgram transcription, but you can edit this to use any STT of your choice.
+
+## API Docs
+This section details the fields of the websocket API call that is required to denoise an audio
+chunk.
+The structure of an API call is as follows: 
+```
+wss://<api_key>.ncompass.tech/denoise/<in_t>/<out_t>/<api_key>/<bps>/<in_freq>/<out_freq>
+```
+- `<api_key>` 
+
+  Your nCompass API key.
+
+- `<in_t>`
+
+  Input type. *Only valid option is pcm*. Kept in the API in order to potentially support server
+  side file encoding in the future. This is important as it tells the server that that the incoming
+  chunk is only audio data and doesn't have anything else like .wav headers for instance.
+
+- `<out_t>`
+
+  Output type. *Only valid option is pcm*. Kept in the API in order to potentially support server
+  side file encoding in the future. 
+
+- `<bps>`
+
+  Bytes per sample. Needs to be specified so the server knows how to correctly read the binary
+  chunk.
+
+- `<in_freq>`
+
+  The sampling frequency of the audio passed in. This needs to be specified in the API as we don't 
+  pass the .wav headers to the server so cannot be inferred.
+
+- `<out_freq>`
+
+  The desired sampling frequency of the returned audio.
