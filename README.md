@@ -1,4 +1,4 @@
-# nCompass Voice Isolation Demo
+# nCompass Voice Isolation
 
 Example code for running voice isolation and then offline transcription with your choice of STT.
 
