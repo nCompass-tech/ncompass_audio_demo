@@ -1,19 +1,24 @@
-# Cleaner Transcription Example
+# nCompass Voice Isolation Demo
 
-Example code for running denoising and then transcription.
+Example code for running voice isolation and then offline transcription with your choice of STT.
 
 ## Dependencies
-`pip install asyncio websockets wave deepgram-sdk`
+### Isolation only
+`pip install asyncio websockets wave`
+### To add deepgram transcription: 
+`pip install deepgram-sdk`
 
 ## Running Instructions
 Edit the run.sh file provided to set the following arguments.
 
 ## Arguments:
-- `wav_file`:         Input file to be denoised and transcribed. mp3 and wav are valid file types
-- `deepgram_api_key`: Deepgram API Key
-- `ncompass_api_key`: nCompass API Key
-- `in_file_type`:     Type of input audio stream. Can be one of ['pcm' or 'mp3']
-- `out_file_type`:    Type of output audio stream. Can be one of ['pcm' or 'mp3']
-- `chunk_size_ms`:    Chunk size in ms of the chunks of input audio stream sent for denoising. Max value is 10000ms
-- `out_frame_rate`:   Output sampling frequency of the returned denoised audio stream
+### Voice Isolation arguments
+- `--wav_file <PATH_TO_FILE>`:       Input file to be denoised and transcribed. mp3 and wav are valid file types
+- `--ncompass_api_key <API_KEY>`:    nCompass API Key
+- `--chunk_size_ms <CHUNK_SIZE_MS>`: Chunk size in ms of the chunks of input audio stream sent for denoising. Max value is 10000ms
+- `--out_frame_rate <FRAME_RATE>`:   Output sampling frequency of the returned denoised audio stream
+
+### To enable transcription after isolation
+- `--transcribe`
+- `--deepgram_api_key <API KEY>`: Deepgram API Key
 
