@@ -49,12 +49,15 @@ async def chunk_audio(audio_frames:       bytes
                       , bytes_per_sample: int) -> AsyncIterator[bytes] :
     ''' 
     This function takes the input audio file read in as bytes and chunks it into chunks based on
-    the chunk size specified. The chunks are yielded followed by a async sleep to yield back
-    control to the running thread from an infinite while loop. 
+    the chunk size specified.
     '''
     bytes_per_chunk = get_bytes_per_chunk(chunk_size_ms, in_frame_rate, bytes_per_sample)
     chunk_start = 0
     while True:
+        ''' 
+        The chunks are yielded followed by a async sleep to yield back
+        control to the running thread from an infinite while loop. 
+        '''
         if chunk_start >= len(audio_frames): break
         end = chunk_start + bytes_per_chunk
         chunk_end = end if end < len(audio_frames) else len(audio_frames)
