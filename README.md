@@ -49,7 +49,7 @@ wss://<api_key>.ncompass.tech/denoise/<in_t>/<out_t>/<api_key>/<bps>/<in_freq>/<
 ```
 - `<api_key>` 
 
-  Your nCompass API key.
+  Your nCompass API key. Please [contact_us](https://www.ncompass.tech/contact_us) for an API key.
 
 - `<in_t>`
 
