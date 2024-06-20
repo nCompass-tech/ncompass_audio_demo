@@ -18,7 +18,7 @@ Edit the run.sh file provided to set the following arguments.
      Input file to be denoised and transcribed. **File must be a .wav file**
 - `--ncompass_api_key <API_KEY>`
 
-   nCompass API Key
+   nCompass API Key. Please [contact_us](https://www.ncompass.tech/contact_us) for an API key.
 - `--chunk_size_ms <CHUNK_SIZE_MS>`
 
   Chunk size in ms of the chunks of input audio stream sent for denoising. **Max value is 10000ms**.
