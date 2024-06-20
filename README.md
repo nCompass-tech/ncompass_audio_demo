@@ -38,7 +38,7 @@ Edit the run.sh file provided to set the following arguments.
 
   We have provided an example for deepgram transcription, but you can edit this to use any STT of your choice.
 
-## API Docs
+## API
 This section details the fields of the websocket API call that is required to denoise an audio
 chunk.
 The structure of an API call is as follows: 
