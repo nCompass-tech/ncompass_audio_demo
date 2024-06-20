@@ -78,19 +78,8 @@ async def ncompass_denoising(wav_file:         str
         bytes_per_sample = wh.getsampwidth()
         audio_frames = wh.readframes(wh.getnframes())
         
-        '''
-        Out frame rate is hardcoded to 8000 as our model currently performs all computations at
-        8000 Hz. Hence, if a different input and output frame rate is provided, we first down/up
-        sample the input to 8kHz and then down/up sample the resulting audio to the desired output
-        sampling frequency. We hardcode the value to 8kHz here to avoid the second resampling since
-        we are only using the resulting audio for transcription.
-        '''
         out_frame_rate = out_frame_rate
         
-        '''
-        Chunk size is hardcoded to 10s as this is the maximum chunk size currently supported by our
-        model and we are running in offline mode.
-        '''
         chunk_size_ms = chunk_size_ms
         async with websockets.connect(get_url(api_key
                                               , in_frame_rate
@@ -108,8 +97,8 @@ async def ncompass_denoising(wav_file:         str
                     res = cast(bytes, await ws.recv())
                     
                     '''
-                    As the return type is set to pcm in the websocket request, we can directly
-                    accumulate the bytes into a bytearray.
+                    The example sends and received pcm data, so the resulting bytes can be directly
+                    accumulated into a bytearray.
                     '''
                     denoised_audio += res
         
