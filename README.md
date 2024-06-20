@@ -3,7 +3,7 @@
 Example code for running voice isolation and then offline transcription with your choice of STT.
 
 ## Dependencies
-### Isolation only
+### Voice Isolation only
 `pip install asyncio websockets wave`
 ### To add deepgram transcription: 
 `pip install deepgram-sdk`
