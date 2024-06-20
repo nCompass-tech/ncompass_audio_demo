@@ -24,6 +24,8 @@ Edit the run.sh file provided to set the following arguments.
   Chunk size in ms of the chunks of input audio stream sent for denoising. **Max value is 10000ms**.
 
   **Note:** The chunk size field is only necessary when emulating streaming audio with an audio file as this requires the file to be chunked into a stream with elements of the specified chunk size. If you already have streaming audio, you can simply pass the stream's chunks via our websocket API to be denoised. Our API will automatically handle arbitrary chunk sizes.
+
+  **Note:** If you don't want realtime denoising and simply want to denoise saved files, just set this argument to 10000.
 - `--out_frame_rate <FRAME_RATE>`
 
   Output sampling frequency of the returned denoised audio stream.
