@@ -4,9 +4,7 @@ Example code for running voice isolation and then offline transcription with you
 
 ## Dependencies
 ### Voice Isolation only
-`pip install asyncio websockets wave`
-### To add deepgram transcription: 
-`pip install deepgram-sdk`
+`pip install asyncio websockets wave deepgram-sdk`
 
 ## Running Instructions
 Edit the run.sh file provided to set the following arguments.
