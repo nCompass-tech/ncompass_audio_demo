@@ -3,8 +3,8 @@
 Example code for running voice isolation and then offline transcription with your choice of STT.
 
 ## Dependencies
-### Voice Isolation only
 `pip install asyncio websockets wave deepgram-sdk`
+Alternatively, just run the file `setup_venv.sh`.
 
 ## Running Instructions
 Edit the run.sh file provided to set the following arguments.

@@ -1,6 +1,6 @@
 NC_API_KEY=<YOUR_NCOMPASS_API_KEY>
 
-CHUNK_SIZE_MS=10000 # chunk size for denoising, max is 10000ms can be as low as 70ms if on-prem
+CHUNK_SIZE_MS=100 # chunk size for denoising, max is 10000ms can be as low as 70ms if on-prem
 OUT_FRAME_RATE=8000 # out frame rate is the sampling freq of the returned deonised audio
 
 INPUT_FILE=./multiple_speakers.wav # input file
